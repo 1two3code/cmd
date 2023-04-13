@@ -1,4 +1,3 @@
-
 @endpoint=https://cmd-zeta.vercel.app/api
 
 POST {{endpoint}}
