@@ -14,5 +14,5 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
 
   res.setHeader("Content-Type", "application/json");
-  res.status(200).send({ random: 'data' });
+  res.status(200).send({ type: 4, data: 'Text returned from bot' });
 };
