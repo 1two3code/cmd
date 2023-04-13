@@ -1,3 +1,5 @@
+// import { webcrypto } from 'node:crypto';
+const { subtle } = globalThis.crypto;
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import { verify } from "discord-verify/node";
 
@@ -11,7 +13,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     res.status(200).send({ type: 1 });
   }
 
-  const publicKey = "";
+  const publicKey = process.env.PUBLIC_KEY!;
   const signature = req.headers["x-signature-ed25519"] as string;
   const timestamp = req.headers["x-signature-timestamp"] as string;
   const rawBody = JSON.stringify(req.body);
@@ -21,7 +23,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     signature,
     timestamp,
     publicKey,
-    crypto.subtle
+    subtle
   );
   //@ts-ignore
   // const isValid = await isValidRequest(req, publicKey);

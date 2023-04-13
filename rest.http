@@ -1,0 +1,11 @@
+
+@endpoint=https://cmd-zeta.vercel.app/api
+
+POST {{endpoint}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": 1
+}
+
