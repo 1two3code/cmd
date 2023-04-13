@@ -1,0 +1,66 @@
+@endpoint={{bot-api}}
+@token={{$dotenv %bot-token}}
+@guild-command-endpoint={{discord-api}}/{{$dotenv %app-id}}/guilds/{{$dotenv %guild-id}}/commands
+@global-command-endpoint={{discord-api}}/{{$dotenv %app-id}}/commands
+
+### "ping"
+POST {{endpoint}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": 1
+}
+
+
+###
+POST {{guild-command-endpoint}}
+Content-Type: application/json
+Accept: application/json
+Authorization: Bot {{token}}
+
+{
+  "name": "High Five",
+  "type": 2
+}
+
+
+###
+POST {{guild-command-endpoint}}
+Content-Type: application/json
+Accept: application/json
+Authorization: Bot {{token}}
+
+{
+  "name": "blep",
+  "type": 1,
+  "description": "Send a random adorable animal photo",
+  "options": [
+    {
+      "name": "animal",
+      "description": "The type of animal",
+      "type": 3,
+      "required": true,
+      "choices": [
+        {
+            "name": "Dog",
+            "value": "animal_dog"
+        },
+        {
+            "name": "Cat",
+            "value": "animal_cat"
+        },
+        {
+            "name": "Penguin",
+            "value": "animal_penguin"
+        }
+      ]
+    },
+    {
+      "name": "only_smol",
+      "description": "Whether to show only baby animals",
+      "type": 5,
+      "required": false
+    }
+  ]
+}

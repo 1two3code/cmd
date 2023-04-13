@@ -1,0 +1,15 @@
+{
+  // "rest-client.previewOption": "body",
+  // "rest-client.previewResponseInUntitledDocument": true,
+  // "rest-client.enableTelemetry": false,
+  // "rest-client.requestNameAsResponseTabTitle": true,
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "bot-api": "https://cmd-zeta.vercel.app/api",
+      "discord-api": "https://discord.com/api/v10/applications",
+      "app-id": "APPLICATION_ID",
+      "guild-id": "GUILD_ID",
+      "bot-token": "BOT_TOKEN"
+    }
+  }
+}
