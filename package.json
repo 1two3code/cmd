@@ -1,0 +1,14 @@
+{
+  "name": "cmd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "Hasse Löfgren",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^2.10.0",
+    "discord-verify": "^1.0.2"
+  }
+}
