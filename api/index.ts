@@ -5,7 +5,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   if (!await isValid(req)) {
     return res.status(401).send("Invalid signature");
   }
-  
+
   const { body } = req;
   if (body?.type === 1) {
     return res.status(200).send({ type: 1 });
@@ -14,5 +14,5 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
 
   res.setHeader("Content-Type", "application/json");
-  res.status(200).send({ type: 4, data: 'Text returned from bot' });
+  res.status(200).send({ type: 4, data: { content: 'Text returned from bot' } });
 };
