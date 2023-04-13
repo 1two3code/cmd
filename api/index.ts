@@ -1,5 +1,4 @@
-// import { webcrypto } from 'node:crypto';
-const { subtle } = globalThis.crypto;
+import { webcrypto } from 'node:crypto';
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import { verify } from "discord-verify/node";
 
@@ -23,7 +22,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     signature,
     timestamp,
     publicKey,
-    subtle
+    webcrypto.subtle
   );
   //@ts-ignore
   // const isValid = await isValidRequest(req, publicKey);
