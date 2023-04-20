@@ -1,8 +1,14 @@
 {
   "functions": {
-    "api/**/*.ts": {
+    "api/*.ts": {
       "memory": 1024,
       "maxDuration": 10
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/hook.ts",
+      "schedule": "0 18 * * *"
+    }
+  ]
 }

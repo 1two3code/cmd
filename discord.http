@@ -43,16 +43,16 @@ Authorization: Bot {{token}}
       "required": true,
       "choices": [
         {
-            "name": "Dog",
-            "value": "animal_dog"
+          "name": "Dog",
+          "value": "animal_dog"
         },
         {
-            "name": "Cat",
-            "value": "animal_cat"
+          "name": "Cat",
+          "value": "animal_cat"
         },
         {
-            "name": "Penguin",
-            "value": "animal_penguin"
+          "name": "Penguin",
+          "value": "animal_penguin"
         }
       ]
     },
